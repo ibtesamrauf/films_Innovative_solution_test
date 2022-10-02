@@ -13,11 +13,13 @@ class FilmFrontendController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    // this function show list of film page
     public function index()
     {
         return view("films.index");
     }
 
+    // this function show create film form page
     public function create()
     {
         return view("films.create");
@@ -68,6 +70,7 @@ class FilmFrontendController extends Controller
         //
     }
 
+    // this function show films details get from their slug values 
     public function showFilmSlug($slug){
         $film = Film::where('slug',$slug)->first();
         if(!$film) abort(404);

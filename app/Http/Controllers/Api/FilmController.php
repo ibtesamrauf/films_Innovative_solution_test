@@ -22,12 +22,11 @@ class FilmController extends Controller
     {
         $film = Film::paginate(1);
         return new FilmCollection($film);
-
     }
 
     /**
      * Store a newly created resource in storage.
-     *
+     * this function store films from apis
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */

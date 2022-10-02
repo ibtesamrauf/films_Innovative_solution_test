@@ -22,6 +22,7 @@ class Film extends Model
         'slug'
     ];
 
+    // these functions used to create unique slug 
     protected static function boot()
     {
         parent::boot();

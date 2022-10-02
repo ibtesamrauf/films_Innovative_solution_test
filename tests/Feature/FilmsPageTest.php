@@ -5,7 +5,7 @@ namespace Tests\Feature;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
-class ExampleTest extends TestCase
+class FilmsPageTest extends TestCase
 {
     /**
      * A basic test example.
@@ -14,8 +14,9 @@ class ExampleTest extends TestCase
      */
     public function testBasicTest()
     {
-        $response = $this->get('/');
-
+        $response = $this->get('/films');
         $response->assertStatus(200);
+        $response->assertSee('Films list');
+        $response->assertDontSee('Film create');
     }
 }

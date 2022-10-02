@@ -15,14 +15,4 @@ use App\Http\Controllers\Api\FilmController;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
 Route::apiResource('film', FilmController::class);
-
-// Route::apiResources([
-//     'photos' => PhotoController::class,
-//     'posts' => PostController::class,
-// ]);
-

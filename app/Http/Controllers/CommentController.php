@@ -14,6 +14,7 @@ class CommentController extends Controller
         $this->middleware('auth');
     }
 
+    // this function show comments page
     public function create(Request $request)
     {
         $film_id = $request->film_id;
@@ -21,6 +22,7 @@ class CommentController extends Controller
         return view("comment.create",compact('film_id'));
     }
 
+    // this function store comments according to logined user
     public function store(Request $request){
         $rules = [
             'name'=> 'required',

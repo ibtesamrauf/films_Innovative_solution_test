@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Films Project List')
+@section('title', 'Film create')
 @section('content')
 
 <div class="container">
